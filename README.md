@@ -24,17 +24,27 @@
 - <b>Security Hardening</b>
   - [Vulnerability Management Report](https://github.com/[YourGitHub]/Nessus-Findings) - Prioritized 15 critical CVEs for patching
 
-<h2>📜 Certifications & Education</h2>
-
+<h2>📜 Certifications </h2>
 - OSCP (In Progress) | TryHackMe Top 5%
-- Master's in Software Development | Quantic School of Business & Tech
-- Bachelor's in Religious Studies | Olabisi Onabanjo University
+- Certificate of Networking Basics​​​ - 2025
+- Cybersecurity fundamentals - ​​​2025
+- Phishing Simulation Certification: Mastercard Cyber Job Simulation - 2024
+- Vulnerability Assessment Certification: Telstra Cyber Job Simulation - 2024
+- Suspicious Activities Log Analysis: Deloitte Cyber Job Simulation - 2024
+- Introduction to CISSP Certification - 2024
+- Introduction to Cybercrime - 2024
+- Introduction to OSINT Course - 2024
+
+<h2>📜 Education Background </h2>
+- Master's in Software Development | Quantic School of Business & Tech - Ongoing
+- Bachelor's in Religious Studies | Olabisi Onabanjo University -2018
+- OND in Surveying & Geoinformatics | Federal School of Surveying Oyo - 2012
 
 <h2>📝 Latest Security Reports</h2>
 
 - [Full Penetration Test Report: testphp.vulnweb.com](https://github.com/[YourGitHub]/Pentest-Report)
 - [SOC Investigation: Exchange Server Exploits](https://github.com/[YourGitHub]/Splunk-Investigation)
-
+- 
 <h2> 🤳 Connect with me:</h2>
 
 [<img align="left" alt="SamuelAdeduntan | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />](https://www.linkedin.com/in/samueladeduntan)
