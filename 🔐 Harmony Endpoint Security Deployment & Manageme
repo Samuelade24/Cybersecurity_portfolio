@@ -1,0 +1,157 @@
+Harmony Endpoint Security Deployment & Management
+Role: Security Engineer (Intern)
+Experience Type: Hands-on Deployment & Administration
+Technology: Check Point Harmony Endpoint Security
+Modules Covered: Architecture | Deployment | Communication | Exclusions
+Repository Goal: Showcase enterprise-level experience with endpoint protection solution using smart deployment and threat policy strategies.
+
+🧭 Table of Contents
+Overview
+System Architecture
+Deployment Strategy
+Client-Server Communication
+Policy Configuration
+Exclusion Management
+Key Logs and Troubleshooting
+Connectivity Test Utility
+Skills Demonstrated
+
+🧩 Overview
+This project highlights the core components of deploying and managing Check Point Harmony Endpoint Security in both cloud and on-premise environments. The work was performed using real-world scenarios involving silent installations, policy enforcement, and exclusion tuning to balance security and operational flexibility.
+
+🏗️ System Architecture
+Client-Side:
+Harmony Endpoint agents installed on endpoints (Windows, Linux).
+Clients located globally (remote, roaming users).
+
+Server-Side:
+SmartEndpoint Management Server:
+Deployment Modes: Cloud or On-Premises
+
+Management Tools:
+SmartConsole
+Web Management Portal
+
+Connection Flow:
+css
+Endpoint Agent ↔ Harmony SmartEndpoint Server ↔ Security Engine & Cloud Services
+
+🚀 Deployment Strategy
+Installation Options:
+Nano Agent (Dropper): Minimal installer that downloads full packages.
+Standalone Package: Full offline installer for restricted environments.
+
+Installation Modes:
+Silent Install: Agent installs without user intervention.
+Interactive Install: User must approve installation.
+
+Linux Installation Steps:
+bash
+chmod +x install_script.sh
+./install_script.sh
+
+Portal Deployment:
+Choose agent version
+Assign capability profiles (Threat Prevention, Compliance, etc.)
+Select platform (Windows/Linux)
+Push deployment policy
+
+🔄 Client-Server Communication
+Clients sync with the server every 60 seconds.
+Policy or status changes are pushed immediately.
+
+Server visibility includes:
+Endpoint health
+Agent versioning
+Threat alerts
+
+Ports and Services:
+Refer to Check Point documentation for the full list of required outbound ports and domains.
+
+⚙️ Policy Configuration
+Modes:
+Computer Mode: Policy is assigned per device.
+User Mode: Policy follows users across multiple devices.
+
+Policy Components:
+Capability toggles (Threat Prevention, Anti-Ransomware, etc.)
+Custom rules for departments (e.g. stricter policies for Finance)
+Threat emulation and file scanning policies
+
+Example:
+yaml
+
+Copy
+Edit
+Policy:
+  Finance:
+    - Disk Encryption: Enabled
+    - Threat Emulation: Strict
+  R&D:
+    - Disk Encryption: Disabled
+    - Logging: Extended
+
+🛡️ Exclusion Management
+Use Case:
+Exclude legitimate backup or compression software from being flagged as ransomware.
+
+Types of Exclusions:
+URL Filtering: Add safe domains
+File Scanning: Add folders, file hashes
+Process-Level: Exclude applications
+
+Reference:
+Used Microsoft Defender exclusion list to configure trusted locations and apps.
+All exclusions aligned with capability-based exclusions in Harmony.
+
+
+📜 Key Logs and Troubleshooting
+Endpoint logs filtered for:
+Threat detections
+Installation events
+Communication failures
+
+Used Threat Hunting feature to:
+Track incident source
+Map affected systems
+Identify recurring threat patterns
+
+🔍 Connectivity Test Utility
+Introduced in version 85.10
+Executable .exe file for client testing
+
+Verifies:
+Connectivity to Harmony Cloud
+Port accessibility
+DNS and certificate resolution
+
+Usage:
+bash
+Run as Admin: ConnectivityTest.exe
+Output highlights blocked services with suggested firewall changes.
+
+✅ Skills Demonstrated
+Category	Skills
+Endpoint Security	Agent deployment, threat simulation
+Linux Administration	Script-based installation
+Network Security	Port validation, firewall rules
+Policy Management	Capability enforcement, exclusions
+Cloud Operations	Web-based portal management
+Threat Detection	Log analysis, real-time hunting
+Automation	Silent installs, script deployment
+
+📂 Repository Recommendation
+Structure your GitHub repo like this:
+
+bash
+Copy
+Edit
+📁 harmony-endpoint-experience
+│
+├── README.md              # ← This file
+├── deployment-scripts/    # Sample install scripts
+├── screenshots/           # Add UI views from the portal
+├── policies/              # YAML/JSON of example policies
+├── logs/                  # Anonymized log examples
+└── docs/
+    └── connectivity-guide.md
